@@ -92,6 +92,48 @@ function imc3(peso, altura){
     console.log(imc);
 }
 
+// Exercicio
+
+function isTruthy(valor){
+    return !!valor;
+}
+console.log(isTruthy(23));
+console.log(isTruthy(``));
+console.log(isTruthy(`True`));
+
+function perimetro(lado){
+    return 4*lado;
+}
+console.log(perimetro(4));
+
+function nomeCompleto(nome,sobrenome){
+    return `${nome} ${sobrenome}`
+}
+console.log(nomeCompleto(`Julio`,`Guimaraes`))
+
+function par(valor){
+   if(valor % 2 == 0){
+       console.log("PAR")
+   }else{
+       console.log("IMPAR")
+   }
+}
+console.log(par(8));
+
+function tipo(valor){
+    return typeof valor;
+}
+console.log(tipo('tipo'));
+console.log(tipo(4));
+
+addEventListener('scroll',function(){
+    console.log(nomeCompleto('Julio', 'Guimaraes'));
+});
+
+
+
+
+
 
 
 
