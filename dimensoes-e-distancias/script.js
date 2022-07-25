@@ -45,5 +45,48 @@ if(small){
 }
 console.log(small);
 
+// Exercicio
 
+const img = document.querySelector('img');
+const imgTop = img.offsetTop;
 
+console.log(imgTop);
+
+function somaImagens(){
+  const imagens = document.querySelectorAll("img");
+  let soma = 0;
+
+  imagens.forEach((img) => {
+    console.log(img.offsetWidth);
+    soma += img.offsetWidth
+  });
+
+  console.log(soma);
+}
+
+somaImagens();
+
+window.onload = function(){ //Janela Carregando
+  somaImagens();
+}
+
+const links = document.querySelectorAll("a");
+console.log(links);
+
+links.forEach((link) =>{
+  const linkWidth = link.offsetWidth;
+  const linkHeight = link.offsetHeight;
+  if(linkWidth >= 48 && linkHeight >= 48){
+    console.log(link,"Possui acessibilidade");
+
+  }else{
+    console.log(link,"Nao possui acessibilidade");
+  }
+})
+
+const browserSmall = window.matchMedia('(max-width:720px)').matches;
+
+if(browserSmall){
+  const menu = document.querySelector(".menu");
+  menu.classList.add("menu-mobile");
+}
