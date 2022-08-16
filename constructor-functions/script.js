@@ -56,5 +56,44 @@ console.log(Carro.preco.constructor.name)
 console.log(Carro.marca.constructor.name)
 console.log(Carro.andar.constructor.name)
 
+// Exercicio
+
+ function People(nome,sobrenome,idade){
+    this.nome = nome;
+    this.sobrenome = sobrenome;
+    this.idade = idade;
+ } 
+
+ People.prototype.nomeCompleto = function(){
+    return `${this.nome} ${this.sobrenome}`
+ }
+
+ const julio = new People("Julio", "Guimaraes", 22);
+
+ console.log(julio);
+ console.log(julio.nomeCompleto());
+
+ console.log(NodeList.prototype)
+ console.log(HTMLAllCollection.prototype)
+ console.log(Document.prototype)
+
+ const li = document.querySelector("li");
+
+ console.log(li.constructor.name);
+ console.log(li.click.constructor.name);
+ console.log(li.innerText.constructor.name);
+ console.log(li.value.constructor.name);
+ console.log(li.hidden.constructor.name);
+ console.log(li.offsetLeft.constructor.name);
+ console.log(li.click());
+
+ console.log(typeof(li.hidden.constructor.name));
+
+
+
+
+
+
+
 
 
