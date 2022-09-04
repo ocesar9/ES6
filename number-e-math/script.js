@@ -31,7 +31,30 @@ console.log(Math.random()*100);
 
 console.log(Math.floor(Math.random()*10))
 
+// Exercicio
+
+  const aleatorio = Math.floor(Math.random()*(2000 - 1050 + 1) + 1050)
+  console.log(aleatorio);
 
 
+  const numeros = '4,5,20,8,9'
+  const arrayNumeros = numeros.split(',');
+  console.log(arrayNumeros);
+  const numeroMaximo = Math.max(...arrayNumeros);
+  console.log(numeroMaximo);
+
+  const listaPrecos = ["R$ 59,99", "R$ 100,22", "R$ 230", " r$ 200"];
+
+  function limpaPreco(preco) {
+    preco = +preco.toUpperCase().replace("R$", "").trim().replace(",", ".");
+    preco = +preco.toFixed(2);
+    return preco;
+  }
+  let soma = 0;
+  listaPrecos.forEach((preco) =>{
+    soma += limpaPreco(preco)
+  })
+  console.log(soma.toLocaleString("pt-br",{style:'currency',currency: "BRL"}))
+  console.log(preco);
 
 
