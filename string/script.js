@@ -38,4 +38,40 @@ listaPrecos.forEach((preco) =>{
   console.log(preco.padStart(20, '.'));
 })
 
+const frase2 = "ta"
+console.log(frase2.repeat(5));
 
+let listaItens = "Camisas Bones Calcas Bermudas Vestidos Saias";
+console.log(listaItens);
+listaItens = listaItens.replace(/[ ]+/g,',');
+console.log(listaItens);
+listaItens = listaItens.replace("Camisas","Shirts");
+console.log(listaItens);
+
+
+const arrayList = listaItens.split(", ");
+console.log(arrayList);
+
+const htmlText = '<div>O melhor item</div><div>A melhor lista</div>';
+const htmlArray = htmlText.split("div");
+
+console.log(htmlText);
+console.log(htmlArray);
+
+const novoHtml = htmlArray.join("section");
+console.log(novoHtml);
+
+const sexo1 = "Feminino";
+console.log(sexo1);
+console.log(sexo1.toUpperCase());
+console.log(sexo1.toLowerCase());
+
+const valor = " R$ 23.00  "
+console.log(valor.trim());
+console.log(valor.trimStart());
+console.log(valor.trimEnd());
+
+
+
+
+const frutasArray = ["Banna", "Melancia", "Laranja"];
