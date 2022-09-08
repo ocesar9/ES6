@@ -117,4 +117,46 @@ console.log(linguagens.slice(2,3))
 const cloneLinguagens = linguagens.slice();
 console.log(cloneLinguagens)
 
+// Exercicio
+
+  const comidas = ["Pizza","Frango","Carne","Macarrao"]
+  
+  comidas.push("Coxinnha")
+  console.log(comidas);
+  
+  comidas.unshift("Peixe", "Batata")
+  console.log(comidas);
+
+  const primeiroValor = comidas.shift();
+  console.log(primeiroValor);
+  const ultimoValor = comidas.pop();
+  console.log(primeiroValor);
+
+
+  const estudantes = ["Marcio","Brenda","Joana","Kleber","Julia"]
+
+  console.log(estudantes.sort());
+  console.log(estudantes.reverse());
+  console.log(estudantes.includes("Juliana"));
+
+  let html = 
+  `
+    <section>
+    <div>Sobre</div>
+    <div>Produtos</div>
+    <div>Contatos</div>
+    </section>
+  `
+
+  html = html.split("section").join("ul").split("div").join("li");
+  console.log(html);
+
+  
+  const carro$ = ["Ford", "Fiat", "Honda"];
+  const cloneCarros = carro$.slice();
+  carro$.pop()
+
+  console.log(carro$)
+  console.log(cloneCarros);
+
 
