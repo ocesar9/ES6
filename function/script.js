@@ -126,3 +126,36 @@ const acelerarHonda = carro.acelerar.bind(honda,100);
 
 console.log(acelerarHonda(20));
 
+// Exercicio
+
+  const paragrafos = document.querySelectorAll("p");
+  console.log(paragrafos);
+
+  const totalCaracteres = Array.prototype.reduce.call(paragrafos,(acumulador,item) =>{
+    console.log(item, item.innerText,item.innerText.length);
+    return acumulador + item.innerText.length ;
+  },0)
+
+  console.log(totalCaracteres);
+
+
+  function criarElemento(tag,classe,conteudo){
+    const elemento = document.createElement(tag);
+    classe ? elemento.classList.add(classe) :null;
+    conteudo ? elemento.innerHTML = conteudo :null;
+    
+
+    return elemento
+  }
+
+  console.log(criarElemento("li", "ativa", "esse e o conteudo"));
+
+
+
+  const h1Titulo = criarElemento.bind(null, 'h1', 'titulo');
+  
+  const cursosJS = h1Titulo("Cursos de javascript")
+  const cursosHTML = h1Titulo("Cursos de html")
+
+  console.log(cursosHTML)
+  console.log(cursosJS)
