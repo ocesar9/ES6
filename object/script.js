@@ -93,7 +93,7 @@ console.log(Object.getOwnPropertyNames(moto));
 console.log(Object.keys(moto$));
 console.log(Object.entries(moto$));
 
-const frutas = ["Banana"]
+const frutas = ["Banana","Pera","Uva", "Maca"]
 
 console.log(Object.getPrototypeOf(frutas))
 
@@ -132,6 +132,31 @@ console.log(Object.isFrozen(carro));
 console.log(Object.isSealed(carro));
 console.log(Object.isExtensible(carro));
 
+console.log(frutas.hasOwnProperty("map"));
+console.log(Array.prototype.hasOwnProperty("map"));
+
+console.log(Object.getOwnPropertyNames(frutas))
+
+console.log(Array.prototype.isPrototypeOf([]));
+
+console.log(frutas.toString());
+
+
+const fruta$ = ["Banana", "Uva"];
+const frase = "Oi frase";
+const somar = function(a,b){
+  return a + b;
+}
+
+const carro$ = {
+  marca: "Ford"
+}
+
+console.log(carro.toString());
+
+console.log(Object.prototype.toString.call(fruta$));
+console.log(Object.prototype.toString.call(frase));
+console.log(Object.prototype.toString.call(somar));
 
 
 
