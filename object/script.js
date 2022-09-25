@@ -158,6 +158,44 @@ console.log(Object.prototype.toString.call(fruta$));
 console.log(Object.prototype.toString.call(frase));
 console.log(Object.prototype.toString.call(somar));
 
+// Exercicios
+
+function verificarDado(dado){
+  return Object.prototype.toString.call(dado);
+}
+
+console.log(verificarDado('String'))
+console.log(verificarDado(2))
+
+const quadrado = {};
+Object.defineProperties(quadrado,{
+  lados:{
+    value:4,
+    enumerable:true
+  }
+})
+
+console.log(quadrado)
+
+const configuracao = {
+  width:800,
+  height:600,
+  background: "#333"
+}
+
+Object.freeze(configuracao);
+
+console.log(configuracao);
+console.log(configuracao.adkjfakd = 44545);
+console.log(configuracao);
+
+console.log(delete configuracao.width);
+
+console.log(Object.getOwnPropertyNames(String.prototype))
+console.log(Object.getOwnPropertyNames(Array.prototype))
+
+
+
 
 
 
