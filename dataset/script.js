@@ -15,7 +15,11 @@ console.log(dataCor.dataset)
 delete div.dataset.width;
 console.log(dataCor.dataset);
 
-const dataAnimaScroll = document.querySelector('[data-anima-scroll]');
+const dataAnimaScroll = document.querySelector('[data-tab="scroll"]');
 console.log(dataAnimaScroll.dataset)
 dataAnimaScroll.dataset.totalHeight = 2000
 console.log(dataAnimaScroll.dataset)
+
+// Exercicios
+
+

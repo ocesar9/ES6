@@ -11,7 +11,7 @@
   <title>Animais Fantasticos</title>
 </head>
 <body>
-  <nav class="menu js-menu">
+  <nav class="menu" data-tab="menu">
     <div data-cor="azulbebe" data-width="500">Uma div</div>
     <div data-anima-scroll="left">Uma div</div>
     <ul>
@@ -21,11 +21,11 @@
       <li><a href="https://www.origamid.com/">Dev ➞</a></li>
     </ul>
   </nav>
-  <section class="grid-section animais js-scroll" id="animais">
+  <section class="grid-section animais" data-tab="scroll" id="animais">
       <h1 class="titulo">
         Animais Fantasticos
       </h1>
-      <ul class="animais-lista js-tabmenu">
+      <ul class="animais-lista" data-tab="tabmenu">
         <!--Comentario-->
         <li>
           <img src="img/imagem1.jpg">
@@ -46,38 +46,38 @@
           <img src="img/imagem6.jpg">
         </li>
       </ul>
-      <div class="animais-descricao js-tabcontent">
-        <section>
+      <div class="animais-descricao" data-tab="content">
+        <section data-tab="show-right">
           <h2>Raposa</h2>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto deserunt eius optio laudantium? Corporis similique repellendus eveniet a reprehenderit laudantium ipsam dolorum ipsa, praesentium voluptates minima voluptatem labore quae voluptatibus.
           Corrupti, amet. Vero explicabo rem illo ullam, repellat reiciendis, repellendus placeat, consectetur accusamus nisi perspiciatis libero impedit. Ullam voluptatem non sit voluptate, rem nam temporibus laboriosam quia rerum. Illum, aut!
           Recusandae vel adipisci quo cum vitae assumenda alias sit consequuntur, facilis, distinctio necessitatibus eum perspiciatis dolorem quod provident eveniet. Debitis iure molestiae incidunt et! Distinctio expedita reprehenderit iste aspernatur corporis.</p>
         </section>
-        <section>
+        <section data-tab="show-down">
           <h2>Esquilo</h2>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto deserunt eius optio laudantium? Corporis similique repellendus eveniet a reprehenderit laudantium ipsam dolorum ipsa, praesentium voluptates minima voluptatem labore quae voluptatibus.
           Corrupti, amet. Vero explicabo rem illo ullam, repellat reiciendis, repellendus placeat, consectetur accusamus nisi perspiciatis libero impedit. Ullam voluptatem non sit voluptate, rem nam temporibus laboriosam quia rerum. Illum, aut!
           Recusandae vel adipisci quo cum vitae assumenda alias sit consequuntur, facilis, distinctio necessitatibus eum perspiciatis dolorem quod provident eveniet. Debitis iure molestiae incidunt et! Distinctio expedita reprehenderit iste aspernatur corporis.</p>
         </section>
-        <section>
+        <section data-tab="show-right">
           <h2>Urso</h2>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto deserunt eius optio laudantium? Corporis similique repellendus eveniet a reprehenderit laudantium ipsam dolorum ipsa, praesentium voluptates minima voluptatem labore quae voluptatibus.
           Corrupti, amet. Vero explicabo rem illo ullam, repellat reiciendis, repellendus placeat, consectetur accusamus nisi perspiciatis libero impedit. Ullam voluptatem non sit voluptate, rem nam temporibus laboriosam quia rerum. Illum, aut!
           Recusandae vel adipisci quo cum vitae assumenda alias sit consequuntur, facilis, distinctio necessitatibus eum perspiciatis dolorem quod provident eveniet. Debitis iure molestiae incidunt et! Distinctio expedita reprehenderit iste aspernatur corporis.</p>
         </section>
-        <section>
+        <section data-tab="show-down">
           <h2>Lobo</h2>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto deserunt eius optio laudantium? Corporis similique repellendus eveniet a reprehenderit laudantium ipsam dolorum ipsa, praesentium voluptates minima voluptatem labore quae voluptatibus.
           Corrupti, amet. Vero explicabo rem illo ullam, repellat reiciendis, repellendus placeat, consectetur accusamus nisi perspiciatis libero impedit. Ullam voluptatem non sit voluptate, rem nam temporibus laboriosam quia rerum. Illum, aut!
           Recusandae vel adipisci quo cum vitae assumenda alias sit consequuntur, facilis, distinctio necessitatibus eum perspiciatis dolorem quod provident eveniet. Debitis iure molestiae incidunt et! Distinctio expedita reprehenderit iste aspernatur corporis.</p>
         </section>
-        <section>
+        <section data-tab="show-right">
           <h2>Macaco</h2>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto deserunt eius optio laudantium? Corporis similique repellendus eveniet a reprehenderit laudantium ipsam dolorum ipsa, praesentium voluptates minima voluptatem labore quae voluptatibus.
           Corrupti, amet. Vero explicabo rem illo ullam, repellat reiciendis, repellendus placeat, consectetur accusamus nisi perspiciatis libero impedit. Ullam voluptatem non sit voluptate, rem nam temporibus laboriosam quia rerum. Illum, aut!
           Recusandae vel adipisci quo cum vitae assumenda alias sit consequuntur, facilis, distinctio necessitatibus eum perspiciatis dolorem quod provident eveniet. Debitis iure molestiae incidunt et! Distinctio expedita reprehenderit iste aspernatur corporis.</p>
         </section>
-        <section>
+        <section data-tab="show-down">
           <h2>Leao</h2>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto deserunt eius optio laudantium? Corporis similique repellendus eveniet a reprehenderit laudantium ipsam dolorum ipsa, praesentium voluptates minima voluptatem labore quae voluptatibus.
           Corrupti, amet. Vero explicabo rem illo ullam, repellat reiciendis, repellendus placeat, consectetur accusamus nisi perspiciatis libero impedit. Ullam voluptatem non sit voluptate, rem nam temporibus laboriosam quia rerum. Illum, aut!
@@ -85,11 +85,11 @@
         </section>
       </div>
   </section>
-  <section class="grid-section faq js-scroll" id="faq">
+  <section class="grid-section faq" data-tab="scroll" id="faq">
     <h1 class="titulo">
       FAQ
     </h1>
-    <dl class="faq-lista js-accordion">
+    <dl class="faq-lista" data-tab="accordion">
       <dt>Qual a idade dos animais?</dt>
       <dd>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta qui omnis temporibus quibusdam similique incidunt eos aut porro. Non nostrum sapiente aperiam dolore dolores doloremque tempore magni pariatur qui.
@@ -113,7 +113,7 @@
     </dl>
   </section>
 
-  <section class="grid-section contato js-scroll" id="contato"> 
+  <section class="grid-section contato" data-tab="scroll" id="contato"> 
     <h1 class="titulo">
       Contato
     </h1>
