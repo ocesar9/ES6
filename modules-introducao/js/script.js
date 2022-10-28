@@ -14,3 +14,4 @@ teste1();
 teste2();
 
 teste.teste1();
+console.log(teste.senha)
