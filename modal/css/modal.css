@@ -49,6 +49,7 @@
   position: absolute;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
   background: #e54;
+  color: white;
   font-size: 1.2rem;
   font-family: "IBM Plex Mono", monospace;
   cursor: pointer;
