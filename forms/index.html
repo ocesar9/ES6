@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+<body>
+  <style>
+    label{
+      display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      margin-bottom: .5rem;
+      margin-top: 1rem;
+    }
+
+    form{
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    input,textarea{
+      width: 100%;
+      box-sizing: 100%;
+      box-sizing: border-box;
+      padding: .5rem;
+      border: 2px solid #000;
+      font-size: 1rem;
+      margin-bottom: .5rem;
+    }
+
+    textarea{
+      height: 150px;
+    }
+
+  </style>
+  <form name="contato" id="contato" action="">
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" id="nome">
+      <label for="email">Email</label>
+      <input type="text" name="nome" id="nome">
+      <label for="mensagem">Mensagem</label>
+      <textarea name="mensagem" id="mensagem"></textarea>
+
+      <span class="texto-keyup" style="display: block;"></span>
+      <span class="texto-change" style="display: block;"></span>
+  </form>
+  <script>
+    const contato = document.querySelector('#contato');
+    const textoKeyUp = document.querySelector('.texto-keyup');
+    const textoChange = document.querySelector('.texto-change');
+    console.log(contato.elements.nome);
+    console.log(document.forms[0]);
+
+
+
+    function handleKeyUp(event){
+      console.log(event.target.value)
+      textoKeyUp.innerText = event.target.value;
+    }
+    function handleChange(event){
+      console.log(event.target.value)
+      textoChange.innerText = event.target.value;
+    }
+
+    contato.addEventListener('keyup', handleKeyUp)
+    contato.addEventListener('change', handleChange)
+  </script>
+</body>
+</html>
