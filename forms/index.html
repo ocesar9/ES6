@@ -21,7 +21,7 @@
       margin: 0 auto;
     }
 
-    input,textarea{
+    input[type="text"],input[type="email"],textarea{
       width: 100%;
       box-sizing: 100%;
       box-sizing: border-box;
@@ -35,14 +35,48 @@
       height: 150px;
     }
 
+    .invalido{
+      border-color: #e54;
+    }
+
   </style>
   <form name="contato" id="contato" action="">
       <label for="nome">Nome</label>
-      <input type="text" name="nome" id="nome">
+      <input type="text" name="nome" id="nome" required>
+      <span class="erro"></span>
       <label for="email">Email</label>
-      <input type="text" name="nome" id="nome">
+      <input type="email" name="email" id="email" required>
+      <span class="erro"></span>
       <label for="mensagem">Mensagem</label>
       <textarea name="mensagem" id="mensagem"></textarea>
+      <select name="cores" id="cores">
+        <option value="blue">azul</option>
+        <option value="red">vermelho</option>
+      </select>
+
+      <div>
+        <input type="color">
+        <input type="date">
+        <input type="number">
+        <input type="range">
+        <input type="password">
+      </div>
+
+      <div>
+        <input type="checkbox" value="identidade" id="identidade">
+        <label for="identidade">Possui identidade?</label>
+        
+        <input type="checkbox" value="casado" id="casado">
+        <label for="casado">Casado?</label>
+      </div>
+
+      <div>
+        <input type="radio" value="baixo" id="baixo" name="instrumento">
+        <label for="baixo">Baixo</label>
+        
+        <input type="radio" value="guitarra" id="guitarra" name="instrumento">
+        <label for="guitarra">Guitarra</label>
+      </div>
 
       <span class="texto-keyup" style="display: block;"></span>
       <span class="texto-change" style="display: block;"></span>
@@ -54,16 +88,37 @@
     console.log(contato.elements.nome);
     console.log(document.forms[0]);
 
-
+    const dados = {}
 
     function handleKeyUp(event){
-      console.log(event.target.value)
-      textoKeyUp.innerText = event.target.value;
+      const target = event.target;
+      if(!target.checkValidity()){
+        target.classList.add('invalido');
+        if(target === contato.elements.nome[0]){
+          target.setCustomValidity("Nome e totalmente necessario");
+        }
+        target.nextElementSibling.innerText = target.validationMessage
+      }
+      // console.log(target.value)
+      // console.log(target.checkValidity())
+      textoKeyUp.innerText = target.value;
+
+      document.body.style.backgroundColor = target.value;
+
+      if(target.checked){
+        console.log(target.value)
+      }
     }
+    contato.addEventListener('change', handleKeyUp)
+    
     function handleChange(event){
-      console.log(event.target.value)
-      textoChange.innerText = event.target.value;
-    }
+        const target = event.target;
+        console.log(target.value)
+        // textoChange.innerText = target.value;
+
+        dados[target.name] = target.value;
+        console.log(dados);
+      }
 
     contato.addEventListener('keyup', handleKeyUp)
     contato.addEventListener('change', handleChange)
