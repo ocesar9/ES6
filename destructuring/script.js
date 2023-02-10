@@ -52,3 +52,27 @@ function handlekeyup({key, keyCode}){
   console.log(key, keyCode)
 }
 document.addEventListener('keyup', handlekeyup);
+
+// Exercicios
+
+  const btn = document.querySelector('button');
+  const {backgroundColor,margin,color} = window.getComputedStyle(btn);
+
+  console.log(backgroundColor, margin, color);
+
+
+  let cursoAtivo = 'JavaScript';
+  let cursoInativo = 'HTML';
+
+  [cursoAtivo,cursoInativo] = [cursoInativo,cursoAtivo];
+  console.log(cursoAtivo,cursoInativo);
+
+  const cachorro = {
+    nome:'Bob',
+    raca: 'Labrador',
+    cor: 'Amarelo'
+  }
+
+  const {cor:bobCor } = cachorro;
+  
+  console.log(bobCor)
