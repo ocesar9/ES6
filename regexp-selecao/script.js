@@ -97,6 +97,23 @@ console.log('julio@gmail.com\ncontato@gmail.com'.replace(regexp33, 'X'));
 const regexp34 = /\u0040/gm;
 console.log('julio@gmail.com\ncontato@gmail.com'.replace(regexp34, 'X'));
 
+const regexp35 = /[\w]+/gi;
+const regexp36 = /(\w+)@([\w.]+)/gi;
+console.log('julio@gmail.com\ncontato@gmail.com'.replace(regexp35, '$&'));
+console.log('julio@gmail.com\ncontato@gmail.com'.replace(regexp36, '$1@origamid.com'));
+console.log('julio@gmail.com\ncontato@gmail.com'.replace(regexp36, 'contato@$2'));
+const regexp37 = /(\w+),\s(\w+)\n?/gi;
+console.log('Julio, Cesar\nRafael, Pereira\nDouglas, Braga'.replace(regexp37,'$2 $1 \n'));
+
+const regexp38 = /(?:ta)+/gi;
+console.log('Batata, Puta ,Pata'.replace(regexp38, 'X'))
+
+const regexp39 = /\d(?=%)/gi
+const regexp40 = /\d(?!%)/gi
+console.log('2em, 4px , 5%, 2px, 1px'.replace(regexp39, 'x'))
+console.log('2em, 4px , 5%, 2px, 1px'.replace(regexp40, 'x'))
+
+
 
 
 
