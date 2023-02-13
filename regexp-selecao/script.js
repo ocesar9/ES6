@@ -43,5 +43,51 @@ console.log('Exemplo de numeros 111.222-333-44'.match(regexp13));
 const regexp14 = /[^ A-z]/g;
 console.log('Exemplo de numeros 111.222-333-44'.match(regexp14));
 
+const regexp15 = /\w/g;
+const regexp16 = /\W/g;
+console.log('Exemplo de numeros 111.222-333-44'.match(regexp15));
+console.log('Exemplo de numeros 111.222-333-44'.match(regexp16));
+const regexp17 = /\d/g;
+const regexp18 = /\D/g;
+console.log('Exemplo de numeros 111.222-333-44'.match(regexp17));
+console.log('Exemplo de numeros 111.222-333-44'.match(regexp18));
+
+const regexp19 = /\s/g;
+const regexp20 = /\S/g;
+const regexp21 = /[\S\s]/g;
+console.log('Exemplo de numeros 111.222-333-44'.match(regexp19));
+console.log('Exemplo de numeros 111.222-333-44'.match(regexp20));
+console.log('Exemplo de numeros 111.222-333-44'.match(regexp21));
+
+const regexp22 = /i{4}/g;
+const regexp23 = /i{1,4}/g;
+console.log('Vaiiii'.match(regexp22));
+console.log('Vaiiiiiii agiirr'.match(regexp23));
+
+const regexp24 = /\w{1,5}/g;
+console.log('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quae, quas nam, nostrum nihil dolores repellendus et ullam incidunt asperiores, mollitia corrupti reiciendis recusandae assumenda alias fugit porro enim deserunt!'.match(regexp24));
+
+
+const regexp25 = /ai*/g;
+console.log('Vaiiii agirrr'.match(regexp25));
+
+const regexp26 = /-\d*/g;
+console.log('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quae, quas nam, nostrum nihil dolores repellendus et ullam incidunt asperiores, mollitia corrupti reiciendis recusandae assumenda alias fugit porro enim deserunt! 111.222-333-44'.match(regexp26));
+
+const regexp27 = /regexp?/gi;
+console.log('Regex e Regexp'.match(regexp27))
+
+const regexp28 = /Lorem|recusandae|\d/gi;
+console.log('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quae, quas nam, nostrum nihil dolores repellendus et ullam incidunt asperiores, mollitia corrupti reiciendis recusandae assumenda alias fugit porro enim deserunt! 111.222-333-44, Lorem ipsum dolor sit amet!'.match(regexp28));
+
+const regexp29 = /\bLorem\b/gi;
+console.log('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quae, quas nam, nostrum nihil dolores repellendus et ullam incidunt asperiores, mollitia corrupti reiciendis recusandae assumenda alias fugit porro enim deserunt! 111.222-333-44, lorem ipsum dolor sit amet!'.replace(regexp29, 'X'));
+
+const regexp30 = /\B\d+\B/gi;
+console.log('11_22 33-44 55e66 77e88'.replace(regexp30,'X'));
+
+
+
+
 
 
