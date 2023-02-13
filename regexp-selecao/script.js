@@ -113,6 +113,19 @@ const regexp40 = /\d(?!%)/gi
 console.log('2em, 4px , 5%, 2px, 1px'.replace(regexp39, 'x'))
 console.log('2em, 4px , 5%, 2px, 1px'.replace(regexp40, 'x'))
 
+// CEP
+const regexp41 = /\d{5}[\s-]?\d{3}/g;
+console.log('50980-725\n50720660\n50720 725'.match(regexp41));
+
+// CPF
+const regexp42 = /\d{3}[.-]?\d{3}[.-]?\d{3}[.-]?\d{2}/g; 
+const regexp43 = /(?:\d{3}[.-]?){3}\d{2}/g; 
+console.log('120.083.994-35\n120.083.994.35\n120-083-994-35\n120083994-35\n12008399435'.match(regexp42));
+console.log('120.083.994-35\n120.083.994.35\n120-083-994-35\n120083994-35\n12008399435'.match(regexp43));
+
+const regexp44 = /\d{2}[-.]?(?:\d{3}[-.]?){2}\/?\d{4}?[-.]?\d{2}/g;
+console.log('00.000.000/0000-00\n00000000000000\n00-000-000-0000-00\n00.000.000/000000\n00.000.000.000000\n00.000.000.0000.00'.match(regexp44));
+
 
 
 
