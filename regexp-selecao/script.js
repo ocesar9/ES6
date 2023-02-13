@@ -86,6 +86,20 @@ console.log('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat 
 const regexp30 = /\B\d+\B/gi;
 console.log('11_22 33-44 55e66 77e88'.replace(regexp30,'X'));
 
+const regexp31 = /^\w+/g;
+const regexp32 = /\w+$/g;
+console.log('julio@gmail.com\ncontato@gmail.com'.replace(regexp31, 'X'));
+console.log('julio@gmail.com\ncontato@gmail.com'.replace(regexp32, 'X'));
+
+const regexp33 = /\n/gm;
+console.log('julio@gmail.com\ncontato@gmail.com'.replace(regexp33, 'X'));
+
+const regexp34 = /\u0040/gm;
+console.log('julio@gmail.com\ncontato@gmail.com'.replace(regexp34, 'X'));
+
+
+
+
 
 
 
