@@ -123,15 +123,20 @@ const regexp43 = /(?:\d{3}[.-]?){3}\d{2}/g;
 console.log('120.083.994-35\n120.083.994.35\n120-083-994-35\n120083994-35\n12008399435'.match(regexp42));
 console.log('120.083.994-35\n120.083.994.35\n120-083-994-35\n120083994-35\n12008399435'.match(regexp43));
 
+// CNPJ
 const regexp44 = /\d{2}[-.]?(?:\d{3}[-.]?){2}\/?\d{4}?[-.]?\d{2}/g;
 console.log('00.000.000/0000-00\n00000000000000\n00-000-000-0000-00\n00.000.000/000000\n00.000.000.000000\n00.000.000.0000.00'.match(regexp44));
 
+// Telefone
+const regex45 = /(?:\+?55\s?)?(?:\(?\d{2}\)?[-\s]?)?\d{4,5}[-\s]?\d{4}/g;
+console.log('+55 11 98888-8888\n+55 11 98888 8888\n+55 11 988888888\n+55 11988888888\n+5511988888888\n5511988888888\n11 98888-8888\n11 98888 8888\n(11) 98888 8888\n(11) 98888-8888\n11-98888-8888\n11 98888 8888\n11988888888\n11988888888\n988888888\n(11)988888888\n98888 8888\n8888 8888'.match(regex45))
 
+// Email
+const regex46 = /[\w.-]+@[\w-]+\.[\w.-]+/gi;
+console.log('email@email.com\nemail@email.com.org\nemail-email@email.com\nemail_email@email.com\nemail.email23@email.com.br\nemail.email23@empresa-sua.com.br\nc@contato.cc'.match(regex46))
 
+// Tags
+const regex47 = /(?<=<\/?)[\w]+/gi;
+console.log('<div>Isso é uma div</div>\n<div class="ativa">Essa está ativa</div>\n<img src="imagem" />\n<img src="imagem">\n<ul class="ativa">\n<li>Essa está ativa</li>\n</ul>'.match(regex47));
 
-
-
-
-
-
-
+// <\/?[\w\s="']+\/?>
