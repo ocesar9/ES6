@@ -139,4 +139,4 @@ console.log('email@email.com\nemail@email.com.org\nemail-email@email.com\nemail_
 const regex47 = /(?<=<\/?)[\w]+/gi;
 console.log('<div>Isso é uma div</div>\n<div class="ativa">Essa está ativa</div>\n<img src="imagem" />\n<img src="imagem">\n<ul class="ativa">\n<li>Essa está ativa</li>\n</ul>'.match(regex47));
 
-// <\/?[\w\s="']+\/?>
+
