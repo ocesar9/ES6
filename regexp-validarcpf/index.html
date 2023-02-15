@@ -21,8 +21,23 @@
       font-size: 1em;
       box-sizing: border-box;
     }
+    input.erro{
+      border-color: tomato;
+    }
+    input.valido{
+      border-color: green;
+    }
     input::placeholder{
       color: rgba(0, 0, 0, 0.2);
+    }
+    .erro-text{
+      display: none;
+      font-family: 'IBM Plex Mono', 'Helvetica';
+      font-size: 0.875ren;
+      color: red;
+    }
+    .erro-text.ativar{
+      display: block;
     }
   </style>
 
