@@ -17,6 +17,7 @@ export default class Tooltip {
     }
   }
 
+  // remove tooltip and add event listeners mouseover and mouseleave to target
   onMouseLeave({ currentTarget }) {
     this.tooltipBox.remove();
     currentTarget.removeEventListener('mouseleave', this.onMouseLeave);
@@ -33,6 +34,7 @@ export default class Tooltip {
     this.tooltipBox = tooltipBox;
   }
 
+  // create tooltip and add event listeners mouseover and mouseleave to target
   onMouseOver({ currentTarget }) {
     // create the tooltip box
     this.criarTooltipBox(currentTarget);
@@ -40,6 +42,7 @@ export default class Tooltip {
     currentTarget.addEventListener('mouseleave', this.onMouseLeave);
   }
 
+  // add mouseover event listeners to the tooltip
   addTooltipsEvent() {
     this.tooltips.forEach((item) => {
       item.addEventListener('mouseover', this.onMouseOver);
