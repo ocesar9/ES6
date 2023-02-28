@@ -1,47 +1,39 @@
-export default function initFuncionamento() {
-  const functionamento = document.querySelector('[data-semana]');
-  const diaSemana = functionamento.dataset.semana.split(',').map(Number);
-  const horarioSemana = functionamento.dataset.horario.split(',').map(Number);
+export default class Funcionamento {
+  constructor(functionamento, activeClass) {
+    this.funcionamento = document.querySelector(functionamento);
+    this.activeClass = activeClass;
+  }
 
-  console.log(diaSemana);
-  console.log(horarioSemana);
+  dadosFuncionamento() {
+    this.diasSemana = this.funcionamento.dataset.semana.split(',').map(Number);
+    this.horarioSemana = this.funcionamento.dataset.horario.split(',').map(Number);
+  }
 
-  const dataAgora = new Date();
-  const diaAgora = dataAgora.getDay();
-  const horarioAgora = dataAgora.getHours();
+  dadosAgora() {
+    this.dataAgora = new Date();
+    this.diaAgora = this.dataAgora.getDay();
+    this.horarioAgora = this.dataAgora.getUTCHours() - 3;
+  }
 
-  const semanaAberto = diaSemana.indexOf(diaAgora) !== -1;
-  const horarioAberto = horarioAgora >= horarioSemana[0] && horarioAgora < horarioSemana[1];
+  estaAberto() {
+    const semanaAberto = this.diasSemana.indexOf(this.diaAgora) !== -1;
+    const horarioAberto = (this.horarioAgora >= this.horarioSemana[0]
+      && this.horarioAgora < this.horarioSemana[1]);
+    return semanaAberto && horarioAberto;
+  }
 
-  console.log(semanaAberto);
-  console.log(horarioAgora);
+  ativaAberto() {
+    if (this.estaAberto()) {
+      this.funcionamento.classList.add(this.activeClass);
+    }
+  }
 
-  if (horarioAberto) {
-    functionamento.classList.add('aberto');
+  init() {
+    if (this.funcionamento) {
+      this.dadosFuncionamento();
+      this.dadosAgora();
+      this.ativaAberto();
+    }
+    return this;
   }
 }
-
-// const agora = new Date();
-// const futuro = new Date('Dec 31 2022');
-
-// console.log(agora);
-// console.log(agora.getDate());
-// console.log(agora.getDay());
-// console.log(agora.getMonth());
-
-// console.log(futuro);
-
-// function transformarDias(tempo){
-//   return tempo / (24 * 60 * 60 * 1000);
-// }
-
-// const diasAgora = transformarDias(agora.getTime())
-// const diasFuturo = transformarDias(futuro.getTime())
-
-// console.log(agora.getTime());
-// console.log(futuro.getTime());
-
-// console.log(diasAgora);
-// console.log(diasFuturo);
-
-// console.log(diasFuturo - diasAgora);
