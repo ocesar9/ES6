@@ -1,28 +1,27 @@
-body{
+body {
   margin: 0px;
 }
 
-ul{
+ul {
   padding: 0px;
   margin: 0px;
   list-style: none;
 }
 
-img{
+img {
   display: block;
   max-width: 100%;
 }
 
-.slide-wrapper{
+.slide-wrapper {
   overflow: hidden;
 }
 
-.slide{
+.slide {
   display: flex;
-  transition: 0.3s;  
 }
 
-.slide:hover{
+.slide:hover {
   will-change: transform;
 }
 
@@ -30,17 +29,38 @@ img{
   flex-shrink: 0;
   width: 80vw;
   max-width: 800px;
-  margin:  0 20px;
+  margin: 0 20px;
 
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
-  opacity: 0.8;
-  transform: scale(0.8);
-  transition: 0.4s;
+  box-shadow: 0 2px 4px rgba(0,0,0,.4);
+  opacity: .8;
+  transform: scale(.8);
+  transition: .4s;
 }
 
 .slide li.active {
   opacity: 1;
   transform: scale(1);
+}
+
+[data-control="slide"] {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+[data-control="slide"] li a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #FB5;
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: -999px;
+  margin: 5px;
+}
+
+[data-control="slide"] li.active a, [data-control="slide"] li a:hover {
+  background: #E54;
 }
